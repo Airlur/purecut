@@ -1,13 +1,41 @@
 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="14" y1="10" x2="82" y2="86" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="18" y1="10" x2="78" y2="90" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0F172A" />
       <stop offset="1" stop-color="#2563EB" />
     </linearGradient>
+    <linearGradient id="trail" x1="30" y1="66" x2="68" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#93C5FD" />
+      <stop offset="0.4" stop-color="#A5B4FC" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#93C5FD" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="trail-core" x1="32" y1="68" x2="66" y2="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0EAFF" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#E0EAFF" stop-opacity="0" />
+    </linearGradient>
   </defs>
   <rect x="8" y="8" width="80" height="80" rx="24" fill="url(#bg)" />
-  <circle cx="48" cy="48" r="22" stroke="white" stroke-width="4" opacity="0.85" />
-  <path d="M28 60L68 32" stroke="#91C1FF" stroke-width="6" stroke-linecap="round" />
-  <circle cx="62" cy="34" r="8" fill="#EEF3FF" />
-  <path d="M30 62C34.5 68.5 41.5 72 49 72C57.5 72 64.5 68 69 62" stroke="#EEF3FF" stroke-width="4" stroke-linecap="round" opacity="0.85" />
+  <path
+    d="M66 30L34 62"
+    stroke="url(#trail)"
+    stroke-width="12"
+    stroke-linecap="round"
+  />
+  <path
+    d="M63 33L36 60"
+    stroke="url(#trail-core)"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+  <g transform="translate(68 28)">
+    <circle r="13" fill="white" opacity="0.08" />
+    <circle r="9.5" fill="white" opacity="0.2" />
+    <circle r="6.5" fill="#9EC5FF" opacity="0.9" />
+    <path
+      d="M0-10L2.4-2.6L10 0L2.4 2.6L0 10L-2.4 2.6L-10 0L-2.4-2.6L0-10Z"
+      fill="#F8FAFF"
+      stroke="#DCE8FF"
+      stroke-width="1"
+    />
+  </g>
 </svg>
