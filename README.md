@@ -1,4 +1,4 @@
-# PureCut – 本地 AI 图片背景去除工具
+﻿# PureCut – 本地 AI 图片背景去除工具
 
 纯前端的本地 AI 抠图工具，基于 Vite + React + TypeScript 构建。所有推理直接在浏览器里完成，`public/models` 中的 RMBG-1.4 模型和 ONNX Runtime Web 运行时会按需下载缓存，图片不会上传到服务端。
 
@@ -39,7 +39,7 @@ npm run build
 
 **一键部署**
 
-[![Deploy to Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Airlur/purecut)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://dash.cloudflare.com/?to=/:account/pages/new/provider/github)
 
 ### Vercel
 
@@ -58,3 +58,4 @@ npm run build
 - `public/models/onnxruntime-web/*`：ONNX Runtime Web (WASM/WebGPU/WebGL 等) 的运行时代码。ImgLy SDK 依赖这些文件实现浏览器内推理。
 
 部署到云端后，这些文件会作为静态资源，由访问者浏览器在首次使用时下载到本地缓存；推理过程仍在用户浏览器中完成，无需服务器算力。
+
