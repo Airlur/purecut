@@ -52,10 +52,22 @@ npm run build
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Airlur/purecut)
 
+## 部署后性能与缓存说明
+
+为确保 ONNX Runtime Web 在生产环境启用多线程加速（SharedArrayBuffer），请保留仓库中的 public/_headers 配置：
+
+- Cross-Origin-Opener-Policy: same-origin
+- Cross-Origin-Embedder-Policy: require-corp
+
+缓存与耗时说明：
+- 首次使用会下载模型与 WASM 资源，耗时较长属于正常现象。
+- 如果在浏览器 DevTools 的 Network 面板勾选了“禁用缓存（Disable cache）”，每次刷新都会重新下载模型，推理时间会明显增加。
+- 正常测试与日常使用时，建议关闭“禁用缓存”以启用浏览器缓存。
 ## 模型文件说明
 
 - `public/models/*`：RMBG-1.4 模型权重及拆分文件，命名为哈希值以便缓存验证。
 - `public/models/onnxruntime-web/*`：ONNX Runtime Web (WASM/WebGPU/WebGL 等) 的运行时代码。ImgLy SDK 依赖这些文件实现浏览器内推理。
 
 部署到云端后，这些文件会作为静态资源，由访问者浏览器在首次使用时下载到本地缓存；推理过程仍在用户浏览器中完成，无需服务器算力。
+
 
