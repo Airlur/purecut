@@ -10,10 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@imgly/background-removal": "^1.7.0",
-    "@imgly/background-removal-data": "^1.4.5",
     "file-saver": "^2.0.5",
     "lucide-react": "^0.555.0",
+    "onnxruntime-web": "^1.24.3",
     "react": "^19.2.0",
     "react-compare-slider": "^3.1.0",
     "react-dom": "^19.2.0",
